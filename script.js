@@ -5,6 +5,7 @@ window.addEventListener("load", function() {
       let pilotnameInput = document.querySelector("input[name=pilotName]");
       let copilotnameInput = document.querySelector("input[name=copilotName]");
       let fuellevelInput = document.querySelector("input[name=fuelLevel]");
+      let cargoMassInput = document.querySelector("input[name=cargoMass]");
       if (pilotnameInput.value === "") {
          alert("Pilot name required!");
          // stop the form submission
@@ -15,14 +16,15 @@ window.addEventListener("load", function() {
          // stop the form submission
          event.preventDefault();
       }
-      if (typeof fuellevelInput.value === "" ){  
+      if (fuellevelInput.value === "" ){  
          alert("Enter Fuel level");  
          event.preventDefault();
+      }
            
-       }else if(typeof fuellevelInput.value !== 'number'){  
-         alert("Enter Numeric value only")  
-         event.preventDefault();
-         }  
+      //  }else if(typeof cargoMassInput.value !== 'number'){  
+      //    alert("Enter cargomass value only")  
+      //    event.preventDefault();
+      //    }  
        
          
       
