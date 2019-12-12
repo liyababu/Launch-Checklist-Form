@@ -22,12 +22,21 @@ window.addEventListener("load", function() {
 
    let form = document.querySelector("form");
    form.addEventListener("submit", function(event) {
+<<<<<<< HEAD
       let pilotName = document.querySelector("input[name=pilotName]");
       let coPilotName = document.querySelector("input[name=copilotName]");
       let fuelLevel =  document.querySelector("input[name=fuelLevel]");
       let cargoMass =  document.querySelector("input[name=cargoMass]");
       if (pilotName.value === "" || coPilotName.value === "" || fuelLevel.value === "" || cargoMass.value === "") {
          alert("All fields are required!");
+=======
+      let pilotnameInput = document.querySelector("input[name=pilotName]");
+      let copilotnameInput = document.querySelector("input[name=copilotName]");
+      let fuellevelInput = document.querySelector("input[name=fuelLevel]");
+      let cargoMassInput = document.querySelector("input[name=cargoMass]");
+      if (pilotnameInput.value === "") {
+         alert("Pilot name required!");
+>>>>>>> 106fe560098a80c7010ecf413f472d563e66f86d
          // stop the form submission
          event.preventDefault();
       }
@@ -36,6 +45,7 @@ window.addEventListener("load", function() {
          // stop the form submissionq
          event.preventDefault();
       }
+<<<<<<< HEAD
       if((!isNaN(pilotName.value)) || (!isNaN(coPilotName.value))){
          alert("Please enter valid name in text");
          // stop the form submission 
@@ -43,6 +53,18 @@ window.addEventListener("load", function() {
       }
       if((fuelLevel.value < 10000) && (cargoMass.value > 10000)){
          alert("Not enough fuel for journey.");
+=======
+      if (fuellevelInput.value === "" ){  
+         alert("Enter Fuel level");  
+         event.preventDefault();
+      }
+           
+      //  }else if(typeof cargoMassInput.value !== 'number'){  
+      //    alert("Enter cargomass value only")  
+      //    event.preventDefault();
+      //    }  
+       
+>>>>>>> 106fe560098a80c7010ecf413f472d563e66f86d
          
          const div = document.getElementById("launchStatusCheck");
             div.innerHTML = `
